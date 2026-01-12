@@ -1,0 +1,128 @@
+<% layout("layouts/boilerplate") %>
+
+<body>
+    <a href="/"><button class="btn btn-secondary mt-2">Back</button></a>
+
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div class="border border-secondary border-2 rounded-3 mx-5 my-4 p-5 bg-light">
+                <h3 class="mb-4 fw-bold">Create New Listing</h3>
+                <form
+                    action="/"
+                    method="post"
+                    class="needs-validation"
+                    novalidate
+                    enctype="multipart/form-data">
+                    <!-- Inside the `name` we have created the key of object to names, so we can access it as object in `req.body`. -->
+                    <div class="mb-4">
+                        <label for="title" class="form-label fw-bold">Title</label>
+                        <input
+                            type="text"
+                            name="listing[title]"
+                            id="title"
+                            placeholder="Give a attractive title to your place"
+                            class="form-control border border-2 border-secondary-subtle"
+                            required />
+                        <div class="invalid-feedback">Title required!</div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="description" class="form-label fw-bold">Description</label>
+                        <textarea
+                            type="text"
+                            name="listing[description]"
+                            id="description"
+                            placeholder="Short description of your place..."
+                            class="form-control border border-2 border-secondary-subtle"
+                            required></textarea>
+                        <div class="invalid-feedback">Enter short description!</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="mb-4 col-md-6">
+                            <label for="image" class="form-label fw-bold">Upload Image</label>
+                            <input
+                                type="file"
+                                name="listing[image]"
+                                id="image"
+                                class="form-control border border-2 border-secondary-subtle"
+                                required />
+                        <div class="invalid-feedback">Upload Image of your property!</div>
+                        </div>
+
+                        <div class="mb-4 col-md-6">
+                            <label for="category" class="form-label fw-bold">Choose Property Type</label>
+                            <select
+                                name="listing[category]"
+                                id="category"
+                                class="form-control border border-2 border-secondary-subtle"
+                                required>
+                                <option value="" disabled selected>Select a category</option>
+                                <option value="Amazing Pools">Amazing Pools</option>
+                                <option value="Amazing Views">Amazing Views</option>
+                                <option value="Arctic">Arctic</option>
+                                <option value="Beach">Beach</option>
+                                <option value="Beachfront">Beachfront</option>
+                                <option value="Bed & Breakfast">Bed & Breakfast</option>
+                                <option value="Camping">Camping</option>
+                                <option value="Castle">Castle</option>
+                                <option value="Countryside">Countryside</option>
+                                <option value="Farms">Farms</option>
+                                <option value="Island">Island</option>
+                                <option value="Lake">Lake</option>
+                                <option value="Lakefront">Lakefront</option>
+                                <option value="Rooms">Rooms</option>
+                                <option value="Top cities">Top cities</option>
+                                <option value="Top of the World">Top of the World</option>
+                                <option value="Topical">Topical</option>
+                                <option value="Treehouse">Treehouse</option>
+                                <option value="Trending">Trending</option>
+                            </select>
+                            <div class="invalid-feedback">Select category for your property!</cate></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="mb-4 col-md-4">
+                            <label for="price" class="form-label fw-bold">Price</label>
+                            <input
+                                type="number"
+                                name="listing[price]"
+                                id="price"
+                                placeholder="1500"
+                                class="form-control border border-2 border-secondary-subtle"
+                                required />
+                            <div class="invalid-feedback">Enter valid price!</div>
+                        </div>
+
+                        <div class="mb-4 col-md-4">
+                            <label for="location" class="form-label fw-bold">Location</label>
+                            <input
+                            type="text"
+                            name="listing[location]"
+                            id="location"
+                            placeholder="Bhandup, Mumbai"
+                            class="form-control border border-2 border-secondary-subtle"
+                            required />
+                            <div class="invalid-feedback">Enter valid location!</div>
+                        </div>
+
+                        <div class="mb-4 col-md-4">
+                            <label for="country" class="form-label fw-bold">Country</label>
+                            <input
+                                type="text"
+                                name="listing[country]"
+                                id="country"
+                                placeholder="India"
+                                class="form-control border border-2 border-secondary-subtle"
+                                required />
+                                <div class="invalid-feedback">Enter valid country name!</div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary w-100 fw-bold border-0 add-new-listing-btn">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

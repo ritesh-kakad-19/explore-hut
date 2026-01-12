@@ -1,0 +1,62 @@
+#filter-tax-switch-container {
+    display: inline-flex;
+    margin: 1rem 0;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Category Section */
+.category-slider-container {
+    overflow: hidden;
+    width: 80%;
+}
+
+.category-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+}
+
+.category-container a {
+    text-decoration: none;
+}
+
+.category-container::-webkit-scrollbar {
+    display: none; /* Chrome */
+}
+
+.category {
+    margin: 0 0.5rem;
+    padding: 0 0.5rem;
+    text-align: center;
+    color: black;
+}
+
+.category:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.category small {
+    display: block;
+    font-size: 0.75rem;
+}
+
+/* Tax Switch Section */
+.tax-toggle-container {
+    display: flex;
+    align-items: center;
+    border: solid 0.1px lightgray;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+}
+
+.form-check-label {
+    font-size: small;
+    font-weight: bold;
+}
+
+.tax-info {
+    display: none;
+}
