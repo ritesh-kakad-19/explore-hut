@@ -74,7 +74,4 @@ The application follows the **MVC (Model-View-Controller)** pattern:
 -   [Dotenv](https://github.com/motdotla/dotenv) (_Environment Variable Management_)
 -   [Joi](https://joi.dev) (_Schema Validation_)
 
-# 🤗 Acknowledgments 🤗
 
-I made this project in the **Full Stack Web Development (MERN Stack)**.
-Special thanks to [Shradha Khapra](https://www.linkedin.com/in/shradha-khapra), who taught this course so wonderfully.☺️
